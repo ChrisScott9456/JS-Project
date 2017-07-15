@@ -4,6 +4,7 @@
   height: 500px;
   font-size: 0;
 }
+
 .tile {
   background: url("background.jpg");
   text-align: center;
@@ -17,7 +18,7 @@
   display: inline-block;
 }
 
-.tile#t1 { background-position: 0px 0px; }
+.tile#t1 { background-position: 0px 0px;}
 .tile#t2 { background-position: -100px 0px; }
 .tile#t3 { background-position: -200px 0px; }
 .tile#t4 { background-position: -300px 0px; }
@@ -33,3 +34,31 @@
 .tile#t14 { background-position: -100px -300px; }
 .tile#t15 { background-position: -200px -300px; }
 .tile#t16 { background: none; }
+
+.tile#t1::before { content: "1"; }
+.tile#t2::before { content: "2"; }
+.tile#t3::before { content: "3"; }
+.tile#t4::before { content: "4"; }
+.tile#t5::before { content: "5"; }
+.tile#t6::before { content: "6"; }
+.tile#t7::before { content: "7"; }
+.tile#t8::before { content: "8"; }
+.tile#t9::before { content: "9"; }
+.tile#t10::before { content: "10"; }
+.tile#t11::before { content: "11"; }
+.tile#t12::before { content: "12"; }
+.tile#t13::before { content: "13"; }
+.tile#t14::before { content: "14"; }
+.tile#t15::before { content: "15"; }
+
+.movable:hover {
+  border: 2px solid red;
+  color: red;
+}
+
+#controls {
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  border: 1px solid black;
+}
