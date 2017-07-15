@@ -12,7 +12,11 @@
 
 <script src="fifteen.js"></script>
 
-<div id="win">Test</div>
+<div id="win" style="visibility: hidden;">
+  <a href="fifteen.html"><img src="background.jpg" style="margin-top: 16px; margin-left: 8px;"></img></a>
+  <br>
+  You Win!
+</div>
 
 <div id="puzzle">
   <div class="tile" id="t1" onclick=""></div>
@@ -36,6 +40,7 @@
 <div id="controls">
   <button type="button" id="start" onclick="checkAdjacent()">Play</button>
   <button type="button" id="shuffle" onclick="shuffle()">Shuffle</button>
+  <button type="button" id="reset" onclick="window.location.reload()">Reset</button>
 </div>
 
 </body>

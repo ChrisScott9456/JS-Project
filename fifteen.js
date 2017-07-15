@@ -110,6 +110,6 @@ function checkWin() {
       counter++;
     }
   }
-
-  alert("You win!");
+  //Display win message
+  document.getElementById("win").style.visibility = "visible";
 }
