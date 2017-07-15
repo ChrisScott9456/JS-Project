@@ -95,4 +95,21 @@ function moveTile(tileID) {
     document.getElementById("t" + i).setAttribute("onclick", "");
   }
   checkAdjacent();
+  checkWin();
+}
+
+//Check if the current board is complete
+function checkWin() {
+  var counter = 1;
+
+  for(i = 0; i < 4; i++) {
+    for(j = 0; j < 4; j++){
+      if(puzzle[i][j] != ("t" + counter)) {
+        return false;
+      }
+      counter++;
+    }
+  }
+
+  alert("You win!");
 }
