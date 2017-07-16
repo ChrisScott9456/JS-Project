@@ -9,6 +9,12 @@ var emptyI = 3; //Location of empty tile
 var emptyJ = 3; //Location of empty tile
 var currI = 0; //Location of current tile
 var currJ = 0; //Location of current tile
+var winOn = false; //Variable to prevent win condition
+
+//Sets win condition on when user clicks "Play"
+function activeWin() {
+  winOn = true;
+}
 
 function shuffle() {
   checkAdjacent();
@@ -21,8 +27,10 @@ function shuffle() {
       counter++;
       moveTile("t" + temp);
 
+      //Stop shuffling after 100 moves
       if(counter == 100) {
         bool = false;
+        winOn = true;
       }
     }
   }
@@ -95,7 +103,7 @@ function moveTile(tileID) {
     document.getElementById("t" + i).setAttribute("onclick", "");
   }
   checkAdjacent();
-  checkWin();
+  if(winOn) { checkWin(); } //If statement to prevent automatic win when shuffling
 }
 
 //Check if the current board is complete

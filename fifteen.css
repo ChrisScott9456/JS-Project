@@ -1,3 +1,17 @@
+body {
+  background: url("bg.jpg");
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
 #puzzle {
   margin: auto;
   width: 430px;
@@ -47,7 +61,7 @@
 .tile#t13 { background-position: 0px -300px; }
 .tile#t14 { background-position: -100px -300px; }
 .tile#t15 { background-position: -200px -300px; }
-.tile#t16 { background: none; }
+.tile#t16 { background: white; }
 
 .tile#t1::before { content: "1"; }
 .tile#t2::before { content: "2"; }

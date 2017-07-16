@@ -12,8 +12,10 @@
 
 <script src="fifteen.js"></script>
 
+<a href="fifteen.html"><h1>Fifteen Puzzle</h1></a>
+
 <div id="win" style="visibility: hidden;">
-  <a href="fifteen.html"><img src="background.jpg" style="margin-top: 16px; margin-left: 8px;"></img></a>
+  <a href="fifteen.html"><img src="background.jpg" style="margin-top: 135px; margin-left: 8px;"></img></a>
   <br>
   You Win!
 </div>
@@ -38,7 +40,7 @@
 </div>
 
 <div id="controls">
-  <button type="button" id="start" onclick="checkAdjacent()">Play</button>
+  <button type="button" id="start" onclick="checkAdjacent(); activeWin();">Play</button>
   <button type="button" id="shuffle" onclick="shuffle()">Shuffle</button>
   <button type="button" id="reset" onclick="window.location.reload()">Reset</button>
 </div>
